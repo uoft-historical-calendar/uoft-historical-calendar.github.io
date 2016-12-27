@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar Converter</title>
+    <meta charset="UTF-8">
+    <title>Calender Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- http://fonts.googleapis.com/earlyaccess/alefhebrew.css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+</ol>
+<div id="converters" class="hidden-print well well-lg">
+    <div id="converter-form" class="hidden-print">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group form-group">
+                    <span class="input-group-addon" id="basic-addon1">Calendar Type</span>
+                    <select id="calendar-type-1" class="form-item form-control" style="width:250px">
+                        <option value="Gregorian_calendar">Gregorian Calendar</option>
+                        <option value="French_Republican_Calendar">French Revolutionary Calendar</option>
+                        <option value="Hebrew_calendar">Hebrew Calendar</option>
+                        <option value="Islamic_calendar">Islamic Calendar</option>
+                    </select>
+                </div>
+                <form id="form-1" class="input-group form-group form-inline">
+                    <div class="form-group" >
+                        <!--day-->
+                        <input id="day-1" class="form-item form-control days1" type="text" style="width:48px" placeholder="day" size="2"
+                               maxlength="2">
+                        <!--decade-->
+                        <input id="décade-1" class="form-item form-control days1" type="text" style="width:48px" placeholder="décade"
+                               size="2" maxlength="2">
+                        <!--month-->
+                        <select id="gregorian-month-1" class="form-item form-control months1" style="width:120px">
+                            <option selected="selected" value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select id="french-month-1" class="form-item form-control months1" style="width:120px">
+                            <option value="1">Vendémiaire</option>
+                            <option value="2">Brumaire</option>
+                            <option value="3">Frimaire</option>
+                            <option value="4">Nivôse</option>
+                            <option value="5">Pluviôse</option>
+                            <option value="6">Ventôse</option>
+                            <option value="7">Germinal</option>
+                            <option value="8">Floréal</option>
+                            <option value="9">Prairial</option>
+                            <option value="10">Messidor</option>
+                            <option value="11">Thermidor</option>
+                            <option value="12">Fructidor</option>
+                        </select>
+                        <select id="hebrew-month-1" class="form-item form-control months1" style="width:120px">
+                            <option value="1">Nisan</option>
+                            <option value="2">Iyyar</option>
+                            <option value="3">Sivan</option>
+                            <option value="4">Tammuz</option>
+                            <option value="5">Av</option>
+                            <option value="6">Elul</option>
+                            <option value="7">Tishri</option>
+                            <option value="8">Heshvan</option>
+                            <option value="9">Kislev</option>
+                            <option value="10">Teveth</option>
+                            <option value="11">Shevat</option>
+                            <option value="12">Adar</option>
+                        </select>
+                        <select id="islamic-month-1" class="form-item form-control months1" style="width:120px">
+                            <option value="1">Muharram</option>
+                            <option value="2">Safar</option>
+                            <option value="3">Rabī‘ al-awwal</option>
+                            <option value="4">Rabī‘ ath-thānī</option>
+                            <option value="5">Jumādá al-ūlá</option>
+                            <option value="6">Jumādá al-ākhirah</option>
+                            <option value="7">Rajab</option>
+                            <option value="8">Sha‘bān</option>
+                            <option value="9">Ramaḍān</option>
+                            <option value="10">Shawwāl</option>
+                            <option value="11">Dhū al-Qa‘dah</option>
+                            <option value="12">Dhū al-Ḥijjah</option>
+                        </select>
+                        <!--year-->
+                        <input id="year-digits-1"  class="form-item form-control years1" type="text" style="width:66px" placeholder="year"
+                               size="4" maxlength="4">
+                        <input id="year-french-revolution-1" type="text" class="form-item form-control years1" style="width:66px" name="hy"
+                               placeholder="year" value="MM" size="6">
+                        <input id="hebrew-year-1" class="form-item form-control years1" type="text" style="width:66px" placeholder="year"
+                               size="4" maxlength="4" value="5060">
+                        <input id="islamic-year-1" class="form-item form-control years1" type="text" style="width:66px" placeholder="year"
+                               size="4" maxlength="4" value="1600">
+                    </div><!-- .form-group -->
+                    <div class="form-group">
+                        <button id="submit-form-1" class="form-submit btn btn-primary">
+                            <i class="glyphicon glyphicon-refresh"></i> Convert </button>
+                    </div><!-- .form-group -->
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <div class="input-group form-group">
+                    <span class="input-group-addon" id="basic-addon2">Calendar Type</span>
+                    <select id="calendar-type-2" class="form-item form-control" style="width:250px">
+                        <option value="Gregorian_calendar">Gregorian Calendar</option>
+                        <option value="French_Republican_Calendar">French Revolutionary Calendar</option>
+                        <option value="Hebrew_calendar">Hebrew Calendar</option>
+                        <option value="Islamic_calendar">Islamic Calendar</option>
+                    </select>
+                </div>
+                <form id="form-2" class="input-group form-group form-inline">
+                    <div class="form-group" >
+                        <!--day-->
+                        <input id="day-2" class="form-item form-control days2" type="text" style="width:48px" placeholder="day" size="2"
+                               maxlength="2">
+                        <!--décade-->
+                        <input id="décade-2" class="form-item form-control days2" type="text" style="width:48px" placeholder="décade" size="2"
+                               maxlength="2">
+                        <!--month-->
+                        <select id="gregorian-month-2" class="form-item form-control months2" style="width:120px">
+                            <option selected="selected" value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select id="french-month-2" class="form-item form-control months2" style="width:120px">
+                            <option value="1">Vendémiaire</option>
+                            <option value="2">Brumaire</option>
+                            <option value="3">Frimaire</option>
+                            <option value="4">Nivôse</option>
+                            <option value="5">Pluviôse</option>
+                            <option value="6">Ventôse</option>
+                            <option value="7">Germinal</option>
+                            <option value="8">Floréal</option>
+                            <option value="9">Prairial</option>
+                            <option value="10">Messidor</option>
+                            <option value="11">Thermidor</option>
+                            <option value="12">Fructidor</option>
+                        </select>
+                        <select id="hebrew-month-2" class="form-item form-control months2" style="width:120px">
+                            <option value="1">Nisan</option>
+                            <option value="2">Iyyar</option>
+                            <option value="3">Sivan</option>
+                            <option value="4">Tammuz</option>
+                            <option value="5">Av</option>
+                            <option value="6">Elul</option>
+                            <option value="7">Tishri</option>
+                            <option value="8">Heshvan</option>
+                            <option value="9">Kislev</option>
+                            <option value="10">Teveth</option>
+                            <option value="11">Shevat</option>
+                            <option value="12">Adar</option>
+                        </select>
+                        <select id="islamic-month-2" class="form-item form-control months2" style="width:120px">
+                            <option value="1">Muharram</option>
+                            <option value="2">Safar</option>
+                            <option value="3">Rabī‘ al-awwal</option>
+                            <option value="4">Rabī‘ ath-thānī</option>
+                            <option value="5">Jumādá al-ūlá</option>
+                            <option value="6">Jumādá al-ākhirah</option>
+                            <option value="7">Rajab</option>
+                            <option value="8">Sha‘bān</option>
+                            <option value="9">Ramaḍān</option>
+                            <option value="10">Shawwāl</option>
+                            <option value="11">Dhū al-Qa‘dah</option>
+                            <option value="12">Dhū al-Ḥijjah</option>
+                        </select>
+                        <!--year-->
+                        <input id="year-digits-2" class="form-item form-control years2" type="text" style="width:66px" placeholder="year"
+                               size="4" maxlength="4" value="2016">
+                        <input id="year-french-revolution-2" type="text" class="form-item form-control years2" style="width:66px" name="hy"
+                               placeholder="year" value="CCIII" size="6">
+                        <input id="hebrew-year-2" class="form-item form-control years2" type="text" style="width:66px" placeholder="year"
+                               size="4" maxlength="4" value="5060">
+                        <input id="islamic-year-2" class="form-item form-control years2" type="text" style="width:66px" placeholder="year"
+                               size="4" maxlength="4" value="1600">
+                    </div><!-- .form-group -->
+                    <div class="form-group">
+                        <button id="submit-form-2" class="form-submit btn btn-primary">
+                            <i class="glyphicon glyphicon-refresh"></i> Convert </button>
+                    </div><!-- .form-group -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="details" class="hidden-print well well-lg">
+    <div class="row" id="calendar">
+        <div class="panel panel-success">
+            <div id="calendar_link" class="panel-heading" href="https://en.wikipedia.org/wiki/Calendar">
+                <h3 class="panel-title" id="calendar_name">Calendar</h3>
+            </div>
+            <div id="calendar_extract" class=panel-body></div>
+        </div>
+    </div>
+    <div class="row" id="date">
+        <div class="panel panel-info">
+            <div id="month_link" class="panel-heading" href="https://en.wikipedia.org/wiki/Month">
+                <h3 class="panel-title" id="month-name">Month</h3>
+            </div>
+            <div id="month-extract" class=panel-body></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="wikipediaPages.js"></script>
+<script src="astro.js"></script>
+<script src="calendar.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="engine.js"></script>
+<script src="dateInfo.js"></script>
+<script>
+    var engine1 = new Engine(1); // Engine monitoring and updating the first form
+    engine1.convertDate(); //Initialize first form
+    var engine2 = new Engine(2); // Engine monitoring and updating the second form
+    engine2.convertDate(); //Initialize second form
+    $(document).ready(function(){
+        // Update engines as you update the forms
+        $(".form-item").change(function () {
+            engine1.updateEngine();
+            engine2.updateEngine();
+        });
+        // Convert the forms as you change the calendar type
+        $("#calendar-type-1").change(function () {
+            engine1.convertDate();
+        });
+        $("#calendar-type-2").change(function () {
+            engine2.convertDate();
+        });
+        // Submitting from Engine 1 means converting Engine 2
+        // and vice versa.
+        $("#submit-form-1").click(function (e) {
+            e.preventDefault(); // To make sure form doesn't submit and redirect
+            engine1.submitDate();
+            engine2.convertDate();
+        });
+        $("#submit-form-2").click(function (e) {
+            e.preventDefault(); // To make sure form doesn't submit and redirect
+            engine2.submitDate();
+            engine1.convertDate();
+        });
+        $(".panel-heading").click(function() {
+            window.location = $(this).attr("href");
+            return false;
+        });
+        $(".panel-heading").mouseover(function() {
+            $(this).css('cursor', 'pointer');
+            return false;
+        });
+    });
+</script>
+</html>
