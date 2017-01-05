@@ -230,7 +230,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="engine.js"></script>
 <script src="dateInfo.js"></script>
+<script src="featuredCalendars.js"></script>
 <script>
+    today = new Date;
+    var jd = gregorian_to_jd(today.getFullYear(), today.getMonth(), today.getDay());
     var engine1 = new Engine(1); // Engine monitoring and updating the first form
     engine1.convertDate(); //Initialize first form
     var engine2 = new Engine(2); // Engine monitoring and updating the second form
