@@ -79,7 +79,6 @@ function research(calendar_name, num){
     research_calendar(calendar_name);
 }
 
-
 // The engine that handles the change of state of both the forms and the calendars.
 var Engine = function (i) { // Engine that will manage the values of the form
     // and oversee conversion.
