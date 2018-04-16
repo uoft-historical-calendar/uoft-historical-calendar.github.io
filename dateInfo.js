@@ -10,7 +10,7 @@ function research_calendar(calendar){
         key = Object.keys(data.query.pages)[0];
         titleString = data.query.pages[key].title;
         extract = data.query.pages[key].extract;
-        detailString = extract + " <a href=\"https://en.wikipedia.og/wiki/" + calendar + "\">Wikipedia</a>";
+        detailString = extract + " <a href=\"https://en.wikipedia.org/wiki/" + calendar + "\">Wikipedia</a>";
         $("#calendar_name").html(titleString);
         $("#calendar_extract").html(detailString);
         $("#calendar_link").attr("href", "https://en.wikipedia.org/wiki/" + calendar);
@@ -29,7 +29,7 @@ function research_month(month){
         key = Object.keys(data.query.pages)[0];
         titleString = data.query.pages[key].title;
         extract = data.query.pages[key].extract;
-        monthString = extract + " <a href=\"https://en.wikipedia.og/wiki/" + month + "\">Wikipedia</a>";
+        monthString = extract + " <a href=\"https://en.wikipedia.org/wiki/" + month + "\">Wikipedia</a>";
         $("#month-name").html(titleString);
         $("#month-extract").html(monthString);
         $("#month_link").attr("href", "https://en.wikipedia.org/wiki/" + month);
