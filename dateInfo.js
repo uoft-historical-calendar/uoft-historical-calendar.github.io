@@ -8,13 +8,12 @@ function research_calendar(calendar){
         "&explaintext=&titles="+calendar+"&callback=?";
     $.getJSON( urlCalendar, function( data ) {
         key = Object.keys(data.query.pages)[0];
-        title = data.query.pages[key].title;
+        titleString = data.query.pages[key].title;
         extract = data.query.pages[key].extract;
-        titleString = title;
-        detailString = extract;
+        detailString = extract + " <a href=\"https://en.wikipedia.og/wiki/" + calendar + "\">Wikipedia</a>";
         $("#calendar_name").html(titleString);
         $("#calendar_extract").html(detailString);
-        $("#calendar_link").attr("href", "https://en.wikipedia.org/wiki/"+calendar);
+        $("#calendar_link").attr("href", "https://en.wikipedia.org/wiki/" + calendar);
     }).done(function( data ) {
         console.log("Calendar lookup succeeded.");
     }).fail(function(){
@@ -28,13 +27,12 @@ function research_month(month){
         "&explaintext=&titles="+month+"&callback=?";
     $.getJSON( urlMonth, function( data ) {
         key = Object.keys(data.query.pages)[0];
-        title = data.query.pages[key].title;
+        titleString = data.query.pages[key].title;
         extract = data.query.pages[key].extract;
-        titleString = title;
-        monthString = extract;
+        monthString = extract + " <a href=\"https://en.wikipedia.og/wiki/" + month + "\">Wikipedia</a>";
         $("#month-name").html(titleString);
         $("#month-extract").html(monthString);
-        $("#month_link").attr("href", "https://en.wikipedia.org/wiki/"+month);
+        $("#month_link").attr("href", "https://en.wikipedia.org/wiki/" + month);
     }).done(function( data ) {
         console.log("Month lookup succeeded.")
     }).fail(function(){
